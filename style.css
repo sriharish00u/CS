@@ -1,0 +1,123 @@
+header {
+    background: rgb(3, 24, 37);
+    color: yellowgreen;
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    color: yellowgreen;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0 10px;
+}
+
+header a:hover {
+    color: white;
+    background: rgb(220, 146, 16); /* Change to desired hover background color */
+    border-radius: 5px;
+    transition: background 0.2s ease;
+}
+
+div {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin: 20px 0;
+    padding: 20px;
+}
+
+footer {
+    background: rgb(3, 24, 37);
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#authentication {
+    background: #f5f7fa;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background: #fff;
+    padding: 2rem 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    width: 350px;
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.login-container input,
+.login-container select {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 0.8rem;
+    background: #0078d4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.login-container button:hover {
+    background: #005fa3;
+}
+
+.login-container .role-select {
+    margin-bottom: 1.2rem;
+}
+
+.login-container .forgot {
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.login-container .forgot a {
+    color: #0078d4;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.login-container .forgot a:hover {
+    text-decoration: underline;
+}
+
+.video video {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
