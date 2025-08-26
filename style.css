@@ -49,10 +49,36 @@ footer {
     background: rgb(3, 24, 37);
     color: white;
     text-align: center;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 5px;
+    margin-top: 40px;
+    padding: 25px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
+
+/* Make links inside footer look nice */
+footer a {
+    color: yellowgreen;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 8px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+/* Responsive text size */
+@media (max-width: 768px) {
+    footer {
+        font-size: 14px;
+        padding: 20px 10px;
+    }
+}
+
 
 /* Login Section */
 #authentication {
@@ -133,8 +159,8 @@ footer {
 }
 
 /* Video Responsive */
-.video video {
-    width: 100%;
+.slideshow-container video {
+    width: 698px;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -169,8 +195,8 @@ footer {
     height: 150px;  
     border-radius: 8px;
     margin-bottom: 10px;
-    object-fit: cover; /* ✅ Keep image size consistent */
 }
+
 
 .faculty-card h3 {
     font-size: 1rem;
@@ -202,26 +228,18 @@ footer {
 
 @media (max-width: 768px) {
     header {
-        flex-direction: row;       /* ✅ Stay in row on mobile */
-        flex-wrap: wrap;           /* ✅ Wrap if needed */
-        justify-content: center;   /* ✅ Center links */
+        flex-direction: row; /* ✅ Keep row on mobile */
+        flex-wrap: wrap; /* ✅ Allow wrapping if space is tight */
+        justify-content: center; /* ✅ Center all links */
         text-align: center;
     }
 
     header a {
-        display: inline-block;     /* ✅ Inline (not block) */
-        margin: 5px 10px;
-    }
-
-    .faculty-card {
-        flex: 1 1 100%;
-        max-width: 90%;
-    }
-
-    .login-container {
-        padding: 1.5rem;
+        display: inline-block; /* ✅ Keep inline (not block) */
+        margin: 5px 10px; /* ✅ Small margin */
     }
 }
+
 
 @media (max-width: 480px) {
     header {
@@ -244,80 +262,80 @@ footer {
         font-size: 0.9rem;
         padding: 10px;
     }
-    }    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
-.login-container {
-    background: #fff;
-    padding: 2rem 2.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-    width: 350px;
-}
-
-.login-container h2 {
+ .slideshow-container {
     text-align: center;
-    margin-bottom: 1.5rem;
-    color: #333;
+    padding: 40px;
+    background: linear-gradient(to right, #031824, #062c43);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 1.5s ease-in-out;
 }
 
-.login-container label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #555;
+/* h1 Styling */
+.slideshow-container h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    color: #f4d03f; /* Yellowish tone for highlight */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.login-container input,
-.login-container select {
-    width: 100%;
-    padding: 0.7rem;
-    margin-bottom: 1.2rem;
-    border: 1px solid #ccc;
+/* h2 Styling */
+.slideshow-container h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #c0c0c0;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* ul Styling */
+.slideshow-container ul {
+    list-style: none;
+    margin: 20px 0 0 0;
+    padding-left: 0;
+    text-align: left;       /* Align text to the left */
+    display: inline-block;  /* So it's only as wide as needed */
+    background: transparent; /* Remove unwanted background */
+}
+.slideshow-container li {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 8px 15px;
     border-radius: 5px;
-    font-size: 1rem;
-}
-
-.login-container button {
-    width: 100%;
-    padding: 0.8rem;
-    background: #0078d4;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
+    font-size: 18px;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background 0.3s ease;
+    margin-bottom: 8px; /* Add gap between items */
+}
+.slideshow-container li:hover {
+    background: rgba(255, 255, 255, 0.3);
 }
 
-.login-container button:hover {
-    background: #005fa3;
+
+/* Animation for container */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-.login-container .role-select {
-    margin-bottom: 1.2rem;
+.slideshow-container p {
+    font-size: 1.2rem;
+    color: #8ce2ed;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
-
-.login-container .forgot {
-    text-align: right;
-    margin-bottom: 1rem;
-}
-
-.login-container .forgot a {
-    color: #0078d4;
-    text-decoration: none;
-    font-size: 0.95rem;
-}
-
-.login-container .forgot a:hover {
-    text-decoration: underline;
-}
-
-.video video {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-
+ul > li > b {     /* Make bold text larger */
+    color: #c7b159;      /* Bright color for emphasis */
+    font-weight: bold;   /* Extra bold effect */
+    text-transform: uppercase; /* Make it all caps */
+    display: inline-block;
+    padding: 5px 10px;   /* Some spacing */
+    background-color: #222; /* Dark background for contrast */
+    border-radius: 5px;  /* Rounded edges */
 }
